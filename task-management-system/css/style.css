@@ -1,0 +1,255 @@
+/* ***************************** Landing Page ******************************* */
+
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f4f4f4;
+}
+
+body.loading {
+    opacity: 0.5;
+    transition: opacity 0.3s ease;
+}
+
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.form-box {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    width: 400px;
+    text-align: center;
+    transition: transform 0.5s ease;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+input {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+input:focus {
+    border-color: #007bff;
+}
+
+button {
+    width: 95%;
+    padding: 10px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* ***************************** Task Scheduling ******************************* */
+
+.dashboard-container {
+    padding: 20px;
+    text-align: center;
+}
+
+.task-form {
+    margin-bottom: 20px;
+}
+
+.task-form input, .task-form select {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.task-form button {
+    width: 92%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.task-form button:hover {
+    background-color: #0056b3;
+}
+
+.task-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.task-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 10px;
+    width: 200px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.task-card:hover {
+    transform: scale(1.05);
+}
+
+.task-card h4 {
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+.task-card p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+/* ***************************** Progress Bar Styling ******************************* */
+.progress-bar {
+    width: 90%;
+    background-color: #f4f4f4;
+    border-radius: 5px;
+    margin: 20px auto;
+    height: 20px;
+    position: relative;
+}
+
+.progress {
+    height: 100%;
+    background-color: #28a745;
+    border-radius: 5px;
+    transition: width 0.5s ease;
+}
+
+/* ***************************** Daily Planner and Task List Styling ******************************* */
+
+h3 {
+    margin-top: 30px;
+}
+
+.task-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.task-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 10px;
+    width: 200px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.task-card:hover {
+    transform: scale(1.05);
+}
+
+.task-card h4 {
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+.task-card p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+/* ***************************** Color-coded priority styling ******************************* */
+.task-card.high-priority {
+    border-left: 5px solid #ff0000;
+}
+
+.task-card.medium-priority {
+    border-left: 5px solid #ffc107;
+}
+
+.task-card.low-priority {
+    border-left: 5px solid #28a745;
+}
+
+/* ***************************** Button Styles ******************************* */
+.btn-logout, .btn-export {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    margin-right: 10px;
+}
+
+.btn-logout:hover, .btn-export:hover {
+    background-color: #0056b3;
+}
+
+
+/* ***************************** Task Card Styles ******************************* */
+
+.task-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.task-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* ***************************** Notifications Styles ******************************* */
+
+
+.notification {
+    background-color: #ffcccc;
+    color: #ff0000;
+    padding: 10px;
+    border: 1px solid #ff0000;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+/* ***************************** Mobile Responsiveness ******************************* */
+
+
+@media (max-width: 768px) {
+    .task-list {
+        flex-direction: column;
+    }
+
+    .task-card {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .task-form input, .task-form select, .task-form button {
+        width: 100%;
+    }
+}
